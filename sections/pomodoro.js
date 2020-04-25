@@ -599,7 +599,7 @@ var SectionMain = class SectionMain extends ME.imports.sections.section_base.Sec
                 this.notif_source.destroyNonResidentNotifications();
             }
 
-            this.notif_source = new MessageTray.Source();
+            this.notif_source = new MessageTray.Source("Pomodoro");
             Main.messageTray.add(this.notif_source);
             this.notif_source.connect('destroy', () => this.sound_player.stop());
 
